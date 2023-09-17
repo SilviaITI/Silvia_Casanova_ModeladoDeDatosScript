@@ -117,25 +117,6 @@ inner join flota.revision r on r.km = cc.kms_revision
 inner join flota.seguro s on s.id = cc.n_poliza  
 group by c.matricula;
 
-select * from flota.coche c2 
-select * from flota.color c3 
-select * from flota.seguro s2 
-select * from flota.aseguradora a2 
-select * from flota.revision r 
-select * from flota.grupo g2 
-select * from flota.marca m2 
-select * from flota.modelo m3 
-select * from flota.moneda m4 
-
-
-select m2.nombre as modelo from flota.modelo m2 ;
-select m.nombre as marca from flota.marca m;
-select g.nombre as grupo from flota.grupo g ;
-select cast(c.fecha_compra as date) as "fecha compra" from flota.coche c;
-select c.matricula as matricula from flota.coche c ;
-select c.km_totales as kilometraje from flota.coche c ;
-select a.nombre as aseguradora from flota.aseguradora a ;
-select s.id as "numero de póliza" from flota.seguro s   ;
 
 select c.matricula  as matricula, cast(c.fecha_compra as date) as "fecha de compra", c.km_totales as "kilometraje", 
 mo.nombre as modelo, m.nombre as marca, g.nombre as grupo, co.nombre as color, se.id as "número de poliza", a.nombre as aseguradora
@@ -147,4 +128,3 @@ inner join flota.color co on co.id = c.id_color
 inner join flota.seguro se on se.id = c.id_seguro 
 inner join flota.aseguradora a on a.id = se.id_aseguradora
 order by matricula;
-
