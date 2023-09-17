@@ -1,4 +1,4 @@
-
+create schema flota;
 --creación de tablas--
 create table flota.coche (
 
